@@ -1,0 +1,9 @@
+README FILE
+
+<Jessica Huang >
+
+s1: Program 1 reads a grayscale PGM image of a sphere, thresholds it to produce a binary image, and computes the centroid (x,y) of the thresholded sphere and the radius of the sphere (maximum distance from the centroild to any foreground pixel.) Esstenially the gray level sphere file takes in the input grayscale .pgm image and the gray-level threshold cuts off pixels (0-255). If the pixels > threshold it becomes 255. CentroidX and centroidY finds the average foreground pixels while the radius finds the maximim Euclidean distance between centroild and ant 255 pixel. When I compile the program to a threshold 85 I get a threshold of 367 224 and 81. 
+
+s2: Program 2 computes the direction and intensities of light sources frm images of a Lambertian sphere (sphere.pgm, sphere2.pgm, and sphere3.pgm). The program takes the sphere center and radius computed in s1 and the brightest pixel in each image. Using the brighest pixel, the program calculates the 3D surface normal of the sphere at the point. I set the light source direction as the normal and the light source intensity is taken as the brightness of the brightest pixel. After computing this the output is a plain text file with 3 lines, one for each light source, containing x,y,x components fo the scaled light direction vector. 
+
+s3: Program 3 computes the surface normals and albedo of an object from three grayscale images taken under differenr light sources. I input three images: object 1, 2, 3. This detects the light sources directions and intensities are read from s2 output file. For each pixel visiable from all three light sources (intensity above threshold): computes the albedo which is the surface reflectance and computes the surface normal. The normals image displays a needle map: at regalr intervals and the normal is projected onto the image plane as a line. The albedo image shows pixel brightness proportional to computed albedo. 
